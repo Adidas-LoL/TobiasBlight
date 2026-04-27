@@ -1,0 +1,275 @@
+/* ── SHARED PRODUCT PAGE STYLES ── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&display=swap');
+
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-dark: #8B6914;
+  --purple: #6C4FA3;
+  --purple-light: #9B79D4;
+  --coral: #E8735A;
+  --teal: #4BBFCE;
+  --cream: #FAF7F2;
+  --white: #FFFFFF;
+  --text-dark: #3A2E1E;
+  --text-muted: #8C7A5E;
+  --border: #D4C5A9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background: var(--cream);
+  color: var(--text-dark);
+}
+
+/* TOP BAR */
+.top-bar {
+  background: var(--purple);
+  color: var(--white);
+  text-align: center;
+  padding: 0.55rem 1rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+}
+
+/* HEADER */
+header {
+  background: var(--white);
+  border-bottom: 2px solid var(--purple);
+  padding: 0;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.4rem 2rem;
+}
+
+.header-cross {
+  font-size: 2.8rem;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.header-divider {
+  width: 1px;
+  height: 60px;
+  background: repeating-linear-gradient(to bottom, var(--gold) 0px, var(--gold) 4px, transparent 4px, transparent 8px);
+  flex-shrink: 0;
+}
+
+.org-name {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  color: var(--gold-dark);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.back-link {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1px;
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--gold-dark); }
+
+/* BREADCRUMB */
+.breadcrumb {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 0.6rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.breadcrumb a { color: var(--gold-dark); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+/* PRODUCT HERO BANNER */
+.product-hero {
+  background: var(--coral);
+  color: var(--white);
+  text-align: center;
+  padding: 2.5rem 2rem;
+}
+
+.product-hero .category {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  opacity: 0.8;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.product-hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.product-hero .tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  opacity: 0.9;
+}
+
+/* MAIN CONTENT */
+.product-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (max-width: 640px) {
+  .product-content { grid-template-columns: 1fr; }
+}
+
+/* PRODUCT IMAGE */
+.product-image-wrap {
+  position: sticky;
+  top: 1rem;
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 1;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--gold);
+  background: linear-gradient(135deg, #e8e0d4, #f5f0ea);
+  object-fit: cover;
+  object-position: center;
+}
+
+.product-badge {
+  background: var(--purple);
+  color: var(--white);
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* PRODUCT DETAILS */
+.product-details {}
+
+.product-price {
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  color: var(--gold-dark);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.2rem;
+}
+
+.product-description {
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.product-description strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.features-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.features-list li {
+  font-size: 1rem;
+  color: var(--text-muted);
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.features-list li::before {
+  content: '✝';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 0.75rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: var(--teal);
+  color: var(--white);
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  padding: 0.85rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+.cta-btn:hover { background: var(--purple); }
+
+.disclaimer-note {
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* DISCLAIMER STRIP */
+.disclaimer-strip {
+  background: var(--teal);
+  color: var(--white);
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.78rem;
+  font-style: italic;
+}
+
+footer {
+  background: var(--text-dark);
+  color: rgba(255,255,255,0.45);
+  text-align: center;
+  padding: 1.8rem 1rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+}
+footer span { color: var(--gold); }
